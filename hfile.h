@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:40:44 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/18 10:56:44 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/21 15:35:12 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
+# include <stdbool.h>
+
 
 // void	ft_putchar(char c);
 void	ft_putstr(const char *s);

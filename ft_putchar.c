@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 03:37:34 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/20 00:39:21 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/21 13:40:32 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	ft_putchar(int c)
 }
 int main ()
 {
-	//char x = 'c';
+	char x = 'c';
 	int i;
 	
 	 i = ft_putchar('c');
-	return printf("the num is %d", i);
+	return printf("\n the num is %d /n", i);
 }

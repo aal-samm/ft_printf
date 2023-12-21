@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:38:40 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/18 07:10:00 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/21 13:43:14 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int	ft_printf(const	char *format, ...)
 				ft_putstr(ft_itoa(va_arg(ap, int)));
 				count += ft_count(va_arg(ap, int));
 			}
+			else if (*format == 'x')
+			
 		}
 		format++;
 	}
