@@ -6,17 +6,29 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 04:53:54 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/18 06:25:54 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/22 20:45:33 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hfile.h"
 
-void	ft_putstr(const char *s)
+int	ft_putstr(const char *s)
 {
-	while (*s != '\0')
-	{
-		ft_putchar(*s);
-		s++;
-	}
+	int	i;
+
+	if (!s)
+		return (write(1, "(NULL)", 6));
+	else
+		return (write(1, s, ft_strlen(s)));
+
 }
+
+
+// int main ()
+// {
+// 	int i;
+// 	char *p = "18534";
+// 	i = ft_putstr(p);
+// 	printf("\n%d",i);
+// 	return (0);
+// }

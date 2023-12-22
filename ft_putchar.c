@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 03:37:34 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/21 13:40:32 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/22 16:19:41 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,25 @@ int	ft_putchar(int c)
 {
 	return (write (1, &c, 1));
 }
-int main ()
-{
-	char x = 'c';
-	int i;
+// #include <unistd.h>
+// #include <stdio.h>
+
+// int main ()
+// {
+// 	// int i;
 	
-	 i = ft_putchar('c');
-	return printf("\n the num is %d /n", i);
-}
+// 	 return ft_putchar(9);
+	 
+// }
+// #include <unistd.h>
+
+// int ft_putchar(int c) {
+//     return write(1, &c, 1);
+// }
+
+// int main() {
+//     int i;
+//     ft_putchar('f');
+//     // printf("\nThe char is %d\n", i); // Use %c to print the character
+//     return 0;
+// }

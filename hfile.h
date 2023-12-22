@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:40:44 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/21 15:35:12 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/22 13:30:39 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 
 // void	ft_putchar(char c);
-void	ft_putstr(const char *s);
+int	ft_putstr(const char *s);
 size_t	ft_strlen(const char *s);
 char	*ft_itoa(int n);
 int		ft_count(int num);
