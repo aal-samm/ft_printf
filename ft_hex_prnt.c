@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hex.c                                           :+:      :+:    :+:   */
+/*   ft_hex_prnt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:44:02 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/22 20:04:50 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/23 18:31:41 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hfile.h"
+#include "print.h"
 
-int	ft_hex_len(unsigned int num )
+static size_t	ft_hex_len(unsigned int num )
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	if (num == 0)
@@ -45,16 +45,16 @@ int	ft_hex_prnt(unsigned int num, bool upper_c)
 	return (ft_hex_len(num));
 }
 
-int	main()
-{
-	int				x;
-	unsigned int	num;
+// int	main()
+// {
+// 	int				x;
+// 	unsigned int	num;
 
-	num = -80;
-	x = ft_hex_prnt(num, 1);
-	// printf("\n%X, %d \n", 0xABCDEF, 12);
-	printf("\n%d \n", x);
-	x= printf("%X\n", num);
-	printf("%d", x);
-	 return (0);
-}
+// 	num = -80;
+// 	x = ft_hex_prnt(num, 1);
+// 	// printf("\n%X, %d \n", 0xABCDEF, 12);
+// 	printf("\n%d \n", x);
+// 	x= printf("%X\n", num);
+// 	printf("%d", x);
+// 	 return (0);
+// }

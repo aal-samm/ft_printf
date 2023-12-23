@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_addr.c                                          :+:      :+:    :+:   */
+/*   ft_addr_prnt.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 16:44:07 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/22 21:38:07 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:46:13 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hfile.h"
+#include "print.h"
 
-size_t	ft_addr_len(unsigned long long num )
+static size_t	ft_addr_len(unsigned long long num )
 {
 	size_t	len;
 
@@ -27,7 +27,7 @@ size_t	ft_addr_len(unsigned long long num )
 	return (len);
 }
 
-void	ft_addr_prnt_re(unsigned long long addr)
+static void	ft_addr_prnt_re(unsigned long long addr)
 {
 	char	*lower;
 
@@ -46,26 +46,36 @@ int	ft_addr_prnt(void *addr)
 	return (ft_addr_len((unsigned long long) addr) +2);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int value = 42;
-    double pi = 3.14159;
-    char *str = "Hello, world!";
-    void *ptr = &value;
+// int main() {
+//     int value = 42;
+//     double pi = 3.14159;
+//     char *str = "Hello, world!";
+//     void *ptr = &value;
 
-    printf("NULL: %p\n", NULL);
-    printf("Integer: %p\n", (void *)&value);
-    printf("Double: %p\n", (void *)&pi);
-    printf("String: %p\n", (void *)str);
-    printf("Pointer: %p\n", ptr);
+//     //printf("NULL: %p\n", NULL);	
+//     //printf("%d", printf("%p", (void *)&value));//jknjkkh
 
-    // Testing ft_addr_prnt
-    ft_addr_prnt(NULL);
-    ft_addr_prnt(&value);
-    ft_addr_prnt(&pi);
-    ft_addr_prnt(str);
-    ft_addr_prnt(ptr);
+//     // printf("Double: %p\n", (void *)&pi);
+//     // printf("String: %p\n", (void *)str);
+//     // printf("Pointer: %p\n", ptr);
 
-    return 0;
-}
+//     // // Testing ft_addr_prnt
+//     // ft_addr_prnt(NULL);
+// 	//     printf("\n");
+
+//     // int i = ft_addr_prnt(NULL);
+// 	// printf("%d", i);
+//     // printf("\n");
+
+//     // ft_addr_prnt(&pi);
+//     // printf("\n");
+
+//     // ft_addr_prnt(str);
+//     // printf("\n");
+
+//     // ft_addr_prnt(ptr);
+//     return 0;
+// char *s = "0x7ffedfefb858";
+// }

@@ -6,11 +6,11 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 03:37:34 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/22 16:19:41 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/23 18:32:13 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hfile.h"
+#include "print.h"
 
 int	ft_putchar(int c)
 {
@@ -22,9 +22,7 @@ int	ft_putchar(int c)
 // int main ()
 // {
 // 	// int i;
-	
 // 	 return ft_putchar(9);
-	 
 // }
 // #include <unistd.h>
 

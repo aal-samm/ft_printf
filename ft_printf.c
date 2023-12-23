@@ -6,11 +6,37 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:38:40 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/22 13:21:12 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/23 20:01:16 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hfile.h"
+#include "print.h"
+
+int	ft_case(const char holder, va_list ap)
+{
+	int		count;
+
+	count = 0;
+	if (holder == 'c')
+		count += ft_putchar(va_arg(ap, int));
+	else if (holder == 's')
+		count += ft_putstr(va_arg(ap, char *));
+	else if (holder == 'p')
+		count += ft_addr_prnt(va_arg(ap, void *));
+	else if (holder == 'd')
+		count += ft_num_prnt(va_arg(ap, int));
+	else if (holder == 'i')
+		count += ft_num_prnt(va_arg(ap, int));
+	else if (holder == 'u')
+		count += ft_unsigned_num_prnt((unsigned int)va_arg(ap, int));
+	else if (holder == 'x')
+		count += ft_hex_prnt(va_arg(ap, size_t), false);
+	else if (holder == 'X')
+		count += ft_hex_prnt(va_arg(ap, size_t), true);
+	else if (holder == '%')
+		count += ft_putchar('%');
+	return (count);
+}
 
 int	ft_printf(const	char *format, ...)
 {
@@ -19,48 +45,32 @@ int	ft_printf(const	char *format, ...)
 
 	count = 0;
 	va_start(ap, format);
+	if (!format)
+		return (0);
 	while (*format != '\0')
 	{
 		if (*format != '%')
-		{
-			ft_putchar(*format);
-			count++;
-		}
+			count += ft_putchar(*format);
 		else
 		{
 			format++;
-			if (*format == 'c')
-			{
-				ft_putchar(va_arg(ap, int));
-				count++;
-			}
-			else if (*format == 's')
-			{
-				ft_putstr(va_arg(ap, char *));
-				count += ft_strlen(va_arg(ap, char *));
-			}
-			else if (*format == 'd')
-			{
-				ft_putstr(ft_itoa(va_arg(ap, int)));
-				count += ft_count(va_arg(ap, int));
-			}
-			else if (*format == 'x')
-			
+			count += ft_case(*format, ap);
 		}
 		format++;
 	}
 	va_end(ap);
 	return (count);
 }
-int main ()
-{
-	 int i;
-	 int v;
-	int u = 123456;
+// int main ()
+// {
+// 	 int i = 0;
+// 	 int v;
+// 	int u = -50;
+// 	void *s =&i;
 
-	// char *x = "i want it that wat";
-	i =printf("the original value is %d\n", u);
-	v = ft_printf("the original value is %d\n", u);
-	printf("original %d, \n new is %d", i, v);
-	return (0);
-}
+// 	// char *x = "i want it that wat";
+// 	i =    printf("%p dsnkadsfkl", NULL);
+// 	v = ft_printf("%p dsnkadsfkl", NULL);
+// 	printf("original %d, \nfunction %d", i, v);
+// 	return (0);
+// }

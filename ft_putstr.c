@@ -6,21 +6,18 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 04:53:54 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/22 20:45:33 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:53:22 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hfile.h"
+#include "print.h"
 
 int	ft_putstr(const char *s)
 {
-	int	i;
-
-	if (!s)
-		return (write(1, "(NULL)", 6));
-	else
+	// if (!s)
+	// 	return (write(1, "(NULL)", 6));
+	// else
 		return (write(1, s, ft_strlen(s)));
-
 }
 
 

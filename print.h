@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hfile.h                                            :+:      :+:    :+:   */
+/*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/17 23:40:44 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/22 13:30:39 by aal-samm         ###   ########.fr       */
+/*   Created: 2023/12/23 18:22:36 by aal-samm          #+#    #+#             */
+/*   Updated: 2023/12/23 19:42:32 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HFILE_H
-# define HFILE_H
+#ifndef PRINT_H
+# define PRINT_H
 
-# include <stdio.h>
 # include <unistd.h>
-# include <stdarg.h>
-# include <stdlib.h>
+# include <stdio.h>
 # include <stdbool.h>
+# include <stdarg.h>
 
-
-// void	ft_putchar(char c);
-int	ft_putstr(const char *s);
+int		ft_addr_prnt(void *addr);
+int		ft_hex_prnt(unsigned int num, bool upper_c);
+int		ft_num_prnt(int num);
+int		ft_printf(const	char *format, ...);
+int		ft_putchar(int c);
+int		ft_putstr(const char *s);
 size_t	ft_strlen(const char *s);
-char	*ft_itoa(int n);
-int		ft_count(int num);
-
-int	ft_putchar(int c);
+int		ft_unsigned_num_prnt(unsigned int num);
 
 #endif
