@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.h                                            :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 18:22:36 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/23 19:42:32 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/25 20:42:58 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_H
-# define PRINT_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
 # include <stdio.h>
@@ -24,7 +24,6 @@ int		ft_num_prnt(int num);
 int		ft_printf(const	char *format, ...);
 int		ft_putchar(int c);
 int		ft_putstr(const char *s);
-size_t	ft_strlen(const char *s);
 int		ft_unsigned_num_prnt(unsigned int num);
 
 #endif

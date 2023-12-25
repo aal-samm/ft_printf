@@ -6,11 +6,11 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:38:40 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/23 20:01:16 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/25 20:28:59 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "ft_printf.h"
 
 int	ft_case(const char holder, va_list ap)
 {
@@ -56,21 +56,26 @@ int	ft_printf(const	char *format, ...)
 			format++;
 			count += ft_case(*format, ap);
 		}
+		if (count < 0)
+			return (-1);
 		format++;
 	}
 	va_end(ap);
 	return (count);
 }
+
+		// if (count < 0)
+		// 	return (-1);
 // int main ()
 // {
-// 	 int i = 0;
+// 	//  int i = 0;
 // 	 int v;
-// 	int u = -50;
-// 	void *s =&i;
+// 	// int u = -50;
+// 	// void *s =&i;
 
-// 	// char *x = "i want it that wat";
-// 	i =    printf("%p dsnkadsfkl", NULL);
+// 	// // char *x = "i want it that wat";
+// 	// i =    printf("%p dsnkadsfkl", NULL);
 // 	v = ft_printf("%p dsnkadsfkl", NULL);
-// 	printf("original %d, \nfunction %d", i, v);
+// 	// printf("original %d, \nfunction %d", i, v);
 // 	return (0);
 // }

@@ -6,11 +6,11 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 16:44:07 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/23 19:46:13 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/25 17:35:45 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "ft_printf.h"
 
 static size_t	ft_addr_len(unsigned long long num )
 {
@@ -39,11 +39,14 @@ static void	ft_addr_prnt_re(unsigned long long addr)
 
 int	ft_addr_prnt(void *addr)
 {
+	unsigned long long	num;
+
 	if (addr == NULL)
 		return (write (1, "0x0", 3));
 	write(1, "0x", 2);
-	ft_addr_prnt_re((unsigned long long )addr);
-	return (ft_addr_len((unsigned long long) addr) +2);
+	num = (unsigned long long) addr;
+	ft_addr_prnt_re(num);
+	return (ft_addr_len(num) + 2);
 }
 
 // #include <stdio.h>

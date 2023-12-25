@@ -6,11 +6,11 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 06:36:30 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/23 18:32:03 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/25 19:04:14 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "ft_printf.h"
 
 static size_t	ft_num_len(int num )
 {
@@ -35,7 +35,6 @@ static size_t	ft_num_len(int num )
 int	ft_num_prnt(int num)
 {
 	long	count;
-	char	*symbol;
 	char	v;
 
 	count = num;
