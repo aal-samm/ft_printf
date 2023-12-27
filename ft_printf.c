@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:38:40 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/25 20:28:59 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/27 13:16:52 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_case(const char holder, va_list ap)
 	else if (holder == 'i')
 		count += ft_num_prnt(va_arg(ap, int));
 	else if (holder == 'u')
-		count += ft_unsigned_num_prnt((unsigned int)va_arg(ap, int));
+		count += ft_num_un_prnt((unsigned int)va_arg(ap, int));
 	else if (holder == 'x')
 		count += ft_hex_prnt(va_arg(ap, size_t), false);
 	else if (holder == 'X')

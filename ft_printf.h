@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 18:22:36 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/25 20:42:58 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/27 13:16:18 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int		ft_num_prnt(int num);
 int		ft_printf(const	char *format, ...);
 int		ft_putchar(int c);
 int		ft_putstr(const char *s);
-int		ft_unsigned_num_prnt(unsigned int num);
+int		ft_num_un_prnt(unsigned int num);
 
 #endif

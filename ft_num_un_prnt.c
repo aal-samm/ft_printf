@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unsigned_num_prnt.c                             :+:      :+:    :+:   */
+/*   ft_num_un_prnt.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 16:37:34 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/12/25 19:16:53 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/12/27 13:17:25 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ static size_t	ft_num_len(unsigned int num)
 	return (len);
 }
 
-int	ft_unsigned_num_prnt(unsigned int num)
+int	ft_num_un_prnt(unsigned int num)
 {
 	unsigned int		count;
 	char				c;
 
 	count = num;
 	if (count > 9)
-		ft_unsigned_num_prnt(count / 10);
+		ft_num_un_prnt(count / 10);
 	c = (count % 10) + '0';
 	write (1, &c, 1);
 	return (ft_num_len(num));
